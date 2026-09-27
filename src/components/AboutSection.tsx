@@ -1,6 +1,6 @@
 import type React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, SunMedium, Heart, Coffee, ArrowRight } from 'lucide-react';
+import { Sparkles, SunMedium, Heart, Coffee, ArrowRight, MapPin } from 'lucide-react';
 import { BAR_IMAGES } from '../config/images';
 
 interface AboutSectionProps {
@@ -57,7 +57,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation })
           </p>
         </div>
 
-        {/* Editorial Two-Column Visual Story */}
+        {/* Editorial Two-Column Visual Story with Real Bar Photography */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">
           {/* Main Atmosphere Image */}
           <motion.div
@@ -70,19 +70,22 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation })
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
               <img
                 src={BAR_IMAGES.interior}
-                alt="Interiér Putna Bar"
+                alt="Mozaikový bar Putna Bar"
                 className="w-full aspect-[4/3] object-cover object-center group-hover:scale-103 transition-transform duration-700"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-zinc-300">
-                <span className="font-medium tracking-wide">Putna Bar &bull; Tomkova 139/22, Hradec Králové</span>
-                <span className="hidden sm:inline text-amber-400 font-light italic">Teplé světlo žárovek &amp; ratan</span>
+                <span className="font-medium tracking-wide flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                  Putna Bar &bull; Tomkova 139/22, Hradec Králové
+                </span>
+                <span className="hidden sm:inline text-amber-400 font-light italic">Mozaikový bar &amp; ratanové lampy</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Narrative Content */}
+          {/* Narrative Content with Real Outdoor Seating Feature */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +105,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation })
               S přicházejícím soumrakem se prostor zahalí do teplého žárovkového světla a žezlo přebírají naši barmani. Od kouřového Old Fashioned přes originální Putna Velvet až po poctivě načepované pivo.
             </p>
 
-            <div className="pt-4">
+            {/* Inset photo of real outdoor garden */}
+            <div className="relative rounded-xl overflow-hidden border border-zinc-800 group aspect-[16/9]">
+              <img
+                src={BAR_IMAGES.garden}
+                alt="Venkovní zahrádka v uličce Tomkova"
+                className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-2.5 left-3 text-[11px] text-zinc-300 font-medium">
+                Letní venkovní zahrádka v uličce Tomkova
+              </div>
+            </div>
+
+            <div className="pt-2">
               <button
                 type="button"
                 onClick={onOpenReservation}
@@ -115,7 +132,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation })
           </motion.div>
         </div>
 
-        {/* Minimalist 4 Pillars Grid (No heavy cards, clean editorial layout) */}
+        {/* Minimalist 4 Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-white/5">
           {pillars.map((pillar, idx) => (
             <motion.div
