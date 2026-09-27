@@ -36,9 +36,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation })
   ];
 
   return (
-    <section id="about" className="relative py-28 sm:py-36 bg-zinc-900/60 border-y border-white/5 overflow-hidden">
-      {/* Subtle warm ambient backlight */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-amber-500/5 rounded-full blur-[140px] pointer-events-none" />
+    <section id="about" className="relative py-24 sm:py-28 bg-zinc-900/60 border-y border-white/5 overflow-hidden">
+      {/* Subtle Ambient Background Lighting: Warm Amber and Deep Muted Petroleum Blue */}
+      <div className="absolute top-1/3 -left-20 w-[34rem] h-[34rem] bg-amber-600/[0.04] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 w-[36rem] h-[36rem] bg-blue-950/20 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}

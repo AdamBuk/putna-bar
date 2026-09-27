@@ -33,13 +33,23 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-/* Subtle Warm Ambient Glows (reflecting warm incandescent bulb lighting) */
+/* Subtle Warm Ambient Glows (reflecting warm incandescent bulb lighting and Putna's deep blue walls) */
 .bg-ambient-warm {
   background: radial-gradient(circle at 50% 20%, rgba(217, 119, 6, 0.08) 0%, rgba(180, 83, 9, 0.03) 40%, transparent 70%);
 }
 
 .bg-ambient-corner {
   background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+}
+
+.bg-ambient-blue {
+  background: radial-gradient(circle at 15% 45%, rgba(14, 116, 144, 0.07) 0%, rgba(30, 58, 138, 0.04) 40%, transparent 70%);
+}
+
+.bg-ambient-dual {
+  background: 
+    radial-gradient(circle at 80% 30%, rgba(217, 119, 6, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(14, 116, 144, 0.06) 0%, transparent 50%);
 }
 
 .text-gradient-amber {

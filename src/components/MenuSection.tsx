@@ -24,13 +24,14 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenReservation }) =
   ];
 
   return (
-    <section id="menu" className="relative py-28 sm:py-36 bg-zinc-950 overflow-hidden">
-      {/* Subtle warm ambient glow */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-[140px] pointer-events-none" />
+    <section id="menu" className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 bg-zinc-950 overflow-hidden">
+      {/* Subtle Ambient Background Lighting: Warm Amber and Deep Muted Petroleum Blue */}
+      <div className="absolute top-1/4 -right-24 w-[34rem] h-[34rem] bg-amber-600/[0.04] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-24 w-[36rem] h-[36rem] bg-sky-950/20 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] uppercase text-amber-400/90 mb-4">
             <span className="w-6 h-px bg-amber-400/50" />
             <span>Nápojový Lístek</span>
@@ -48,7 +49,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenReservation }) =
         </div>
 
         {/* Minimalist Editorial Category Filter */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.key;
             return (
@@ -78,7 +79,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenReservation }) =
           })}
         </div>
 
-        {/* Editorial Menu Grid (Sophisticated Magazine Aesthetic) */}
+        {/* Editorial Menu Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
@@ -184,8 +185,8 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onOpenReservation }) =
           </AnimatePresence>
         </motion.div>
 
-        {/* Editorial Footnote / Reservation Prompt */}
-        <div className="mt-20 pt-10 border-t border-zinc-800/80 text-center max-w-xl mx-auto space-y-4">
+        {/* Editorial Footnote / Reservation Prompt (Refined Natural Spacing) */}
+        <div className="mt-14 pt-8 border-t border-zinc-800/80 text-center max-w-xl mx-auto space-y-4">
           <p className="text-xs uppercase tracking-widest text-zinc-400">
             Máte chuť na drink podle vaší nálady?
           </p>
